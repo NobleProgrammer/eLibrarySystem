@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="stackPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="569.0" prefWidth="342.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="removebook.RemoveBookPopupController">
+   <children>
+      <AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="569.0" prefWidth="342.0">
+         <children>
+            <VBox prefHeight="568.0" prefWidth="342.0">
+               <children>
+                  <HBox prefHeight="44.0" prefWidth="342.0" spacing="200.0">
+                     <children>
+                        <Label text="Remove Book">
+                           <HBox.margin>
+                              <Insets left="5.0" top="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="44.0" prefWidth="342.0" spacing="130.0">
+                     <children>
+                        <JFXRadioButton fx:id="byName" onMouseClicked="#radioListener" text="By Name">
+                           <HBox.margin>
+                              <Insets left="5.0" top="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXRadioButton>
+                        <JFXRadioButton fx:id="byID" onMouseClicked="#radioListener" text="By ID">
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXRadioButton>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="44.0" prefWidth="342.0">
+                     <children>
+                        <JFXTextField fx:id="nameText" prefHeight="25.0" prefWidth="205.0" promptText="Ex: Greatest 100">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </JFXTextField>
+                        <JFXTextField fx:id="idText" promptText="Ex: 1">
+                           <HBox.margin>
+                              <Insets left="30.0" right="5.0" />
+                           </HBox.margin>
+                        </JFXTextField>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="44.0" prefWidth="342.0" spacing="10.0">
+                     <children>
+                        <JFXButton fx:id="search" onAction="#searchHandler" prefHeight="39.0" prefWidth="135.0" text="Search Book">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                        <Label fx:id="notFound" text="Book not found">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets top="7.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="44.0" prefWidth="342.0" spacing="200.0">
+                     <children>
+                        <Label text="Book Information: ">
+                           <HBox.margin>
+                              <Insets left="5.0" top="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <VBox prefHeight="311.0" prefWidth="342.0">
+                     <children>
+                        <HBox prefHeight="52.0" prefWidth="342.0" spacing="5.0">
+                           <children>
+                              <Label prefHeight="32.0" prefWidth="104.0" text="Book Name:">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="5.0" top="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label fx:id="bookName" prefHeight="32.0" prefWidth="219.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets top="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="52.0" prefWidth="342.0" spacing="5.0">
+                           <children>
+                              <Label prefHeight="32.0" prefWidth="107.0" text="Book Author:">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="5.0" top="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label fx:id="bookAuthor" prefHeight="32.0" prefWidth="215.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets top="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="52.0" prefWidth="342.0" spacing="5.0">
+                           <children>
+                              <Label prefHeight="32.0" prefWidth="107.0" text="Publish Year:">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="5.0" top="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label fx:id="publishYear" prefHeight="32.0" prefWidth="213.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets top="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="52.0" prefWidth="342.0" spacing="5.0">
+                           <children>
+                              <Label prefHeight="32.0" prefWidth="123.0" text="Book Category:">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="5.0" top="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label fx:id="bookCategory" prefHeight="32.0" prefWidth="200.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets top="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="52.0" prefWidth="342.0" spacing="5.0">
+                           <children>
+                              <Label prefHeight="32.0" prefWidth="123.0" text="Book Buy Price:">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="5.0" top="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label fx:id="bookBuyPrice" prefHeight="32.0" prefWidth="201.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets top="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="52.0" prefWidth="342.0" spacing="5.0">
+                           <children>
+                              <Label prefHeight="32.0" prefWidth="135.0" text="Book Rent Price:">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="5.0" top="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label fx:id="bookRentPrice" prefHeight="32.0" prefWidth="187.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets top="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <HBox prefHeight="44.0" prefWidth="342.0" spacing="200.0">
+                     <children>
+                        <JFXButton fx:id="remove" onAction="#removeHandler" prefHeight="39.0" prefWidth="96.0" text="Remove">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="120.0" top="10.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

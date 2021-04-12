@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="stackPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="448.0" prefWidth="981.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="login.LoginPageController">
+   <children>
+      <AnchorPane id="AnchorPane" fx:id="pane" prefHeight="448.0" prefWidth="981.0">
+         <children>
+            <HBox prefHeight="454.0" prefWidth="981.0">
+               <children>
+                  <VBox prefHeight="579.0" prefWidth="609.0" spacing="40.0">
+                     <children>
+                        <Label prefHeight="54.0" prefWidth="78.0" text="Sign Up">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="250.0" top="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <JFXTextField fx:id="usernameSignup" prefHeight="29.0" prefWidth="609.0" promptText="Username">
+                           <VBox.margin>
+                              <Insets left="40.0" right="40.0" top="10.0" />
+                           </VBox.margin>
+                        </JFXTextField>
+                        <JFXPasswordField fx:id="passwordSignup" promptText="Password">
+                           <VBox.margin>
+                              <Insets left="40.0" right="40.0" top="10.0" />
+                           </VBox.margin>
+                        </JFXPasswordField>
+                        <Label prefHeight="27.0" prefWidth="97.0" text="Sign in as :">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="40.0" />
+                           </VBox.margin>
+                        </Label>
+                        <HBox prefHeight="38.0" prefWidth="609.0" spacing="15.0">
+                           <VBox.margin>
+                              <Insets top="-20.0" />
+                           </VBox.margin>
+                           <children>
+                              <JFXRadioButton fx:id="adminRadioButton" prefHeight="31.0" prefWidth="80.0" text="Admin">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="120.0" />
+                                 </HBox.margin>
+                              </JFXRadioButton>
+                              <JFXRadioButton fx:id="clientRadioButton" prefHeight="31.0" prefWidth="80.0" text="Client">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </JFXRadioButton>
+                           </children>
+                        </HBox>
+                        <JFXButton fx:id="signupButton" onAction="#signUpHandler" prefHeight="44.0" prefWidth="146.0" text="Sign Up!">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="220.0" top="-10.0" />
+                           </VBox.margin>
+                        </JFXButton>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="491.0" prefWidth="371.0" spacing="40.0">
+                     <children>
+                        <Label prefHeight="54.0" prefWidth="61.0" text="Login">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="150.0" top="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <JFXTextField fx:id="usernameLogin" prefHeight="29.0" prefWidth="609.0" promptText="Username">
+                           <VBox.margin>
+                              <Insets left="40.0" right="40.0" top="10.0" />
+                           </VBox.margin>
+                        </JFXTextField>
+                        <JFXPasswordField fx:id="passwordLogin" promptText="Password">
+                           <VBox.margin>
+                              <Insets left="40.0" right="40.0" top="10.0" />
+                           </VBox.margin>
+                        </JFXPasswordField>
+                        <JFXButton fx:id="loginButton" onAction="#loginHandler" prefHeight="44.0" prefWidth="146.0" text="Login in">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="115.0" top="20.0" />
+                           </VBox.margin>
+                        </JFXButton>
+                     </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
